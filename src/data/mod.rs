@@ -28,6 +28,9 @@ impl<'a> DataFrame<'a> {
                     index += 2; // skip Qos Control
                 }
                 DataSubtype::Data => {}
+                DataSubtype::DataCFAck => {}
+                DataSubtype::DataCFPoll => {}
+                DataSubtype::DataCFAckCFPoll => {}
                 _ => return None,
             },
             _ => unreachable!(),

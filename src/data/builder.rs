@@ -39,6 +39,9 @@ impl DataFrameBuilder {
                     index += 2; // skip Qos Control
                 }
                 DataSubtype::Data => {}
+                DataSubtype::DataCFAck => {}
+                DataSubtype::DataCFPoll => {}
+                DataSubtype::DataCFAckCFPoll => {}
 
                 // invalid type for holding data
                 _ => return,
